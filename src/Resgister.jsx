@@ -1,51 +1,73 @@
-import React, { useState } from 'react'
-import { ToastContainer,toast } from 'react-toastify'
-import './App.css'
-import { useDispatch } from 'react-redux'
-import { addData } from './Counterslice'
-
-
+import React, { useState } from "react";
+import { ToastContainer, toast } from "react-toastify";
+import "./App.css";
+import { useDispatch } from "react-redux";
+import { addData } from "./Counterslice";
+import { Dropdown } from "react-bootstrap";
 
 export const Resgister = () => {
-    const [Data,setData]=useState('')
-    
-let handleChange=(event)=>{
-setData({...Data,[event.target.name]:event.target.value})    
+  const [Data, setData] = useState("");
 
-}
- let handleSubmit=(event)=>{
-    event.preventDefault()
-    setData(Data)
-    if(Data){
+  let handleChange = (event) => {
+    setData({ ...Data, [event.target.name]: event.target.value });
+  };
+  let handleSubmit = (event) => {
+    event.preventDefault();
+    setData(Data);
+    if (Data) {
+      console.log(Data);
+      dispatch(addData(Data));
 
-        console.log(Data);
-        dispatch(addData)
-
-        
-        toast.success('Register sucess')
+      toast.success("Register sucess");
+    } else {
+      toast.error("Enter data");
     }
-    else{
-        toast.error('Enter data')
-
-    }
- 
- }
- const dispatch =useDispatch()
+  };
+  const dispatch = useDispatch();
 
   return (
- 
-
     <div>
-        <ToastContainer/>
-        
-      <form className='form'onSubmit={handleSubmit}>
-      <input type="text" onChange={handleChange} placeholder='Firstname' name="Firstname" />
-      <input type="text" onChange={handleChange} placeholder='Lastname' name="Lastname" />
-      <input type="number" onChange={handleChange} placeholder='Age' name="Age"/>
-      <input type="text" onChange={handleChange} placeholder='password' name="password"/>
-      <input  type='submit'/>
+      <ToastContainer />
+
+      <form className="form" onSubmit={handleSubmit}>
+        <input
+          type="text"
+          onChange={handleChange}
+          placeholder="Firstname"
+          name="Firstname"
+        />
+        <input
+          type="text"
+          onChange={handleChange}
+          placeholder="Lastname"
+          name="Lastname"
+        />
+        <input
+          type="number"
+          onChange={handleChange}
+          placeholder="Age"
+          name="Age"
+        />
+        <input type="text"
+        onChange={handleChange}
+        placeholder="username"
+        name="Username" />
+        <input
+          type="text"
+          onChange={handleChange}
+          placeholder="password"
+          name="password"
+        />
+      <select onChange={handleChange} name="Usertype">
+        <option value='Student'>Student
+        </option>
+        <option value='Teacher'>Teacher
+        </option>
+        <option value='Admin'>Admin
+        </option>
+      </select>
+        <input type="submit" />
       </form>
-    
- </div>
-  )
-}
+    </div>
+  );
+};
