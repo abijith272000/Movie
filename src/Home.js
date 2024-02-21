@@ -1,0 +1,10 @@
+import React from 'react'
+import './App.css'
+export const Home = () => {
+  return (
+    <div>
+
+      <h2>Welcome to home</h2>
+    </div>
+  )
+}
