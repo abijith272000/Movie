@@ -4,6 +4,7 @@ import "./App.css";
 import { useDispatch } from "react-redux";
 import { addData } from "./Counterslice";
 import { Dropdown } from "react-bootstrap";
+import axios from "axios";
 
 export const Resgister = () => {
   const [Data, setData] = useState("");
@@ -11,8 +12,12 @@ export const Resgister = () => {
   let handleChange = (event) => {
     setData({ ...Data, [event.target.name]: event.target.value });
   };
-  let handleSubmit = (event) => {
+  const handleSubmit =async (event) => {
     event.preventDefault();
+    dispatch(addData({...Data}))
+    let response=await axios.post('http://localhost:4000/insert',Data)
+    console.log(response);
+    
     setData(Data);
     if (Data) {
       console.log(Data);

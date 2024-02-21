@@ -6,6 +6,7 @@ import { Resgister } from './Resgister';
 import { Login } from './Login';
 import { Form } from 'react-bootstrap';
 import { Home } from './Home';
+import { View } from './View';
 import {BrowserRouter,Routes,Route} from 'react-router-dom'
 import { Navigation } from './Navigation';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -23,6 +24,7 @@ root.render(
           <Route path="/Home" element={<Home />} />
           <Route path="/Login" element={<Login/>} />
           <Route path="/Register" element={<Resgister />} />
+          <Route path="/View" element={<View/>}/>
           </Route>
     </Routes>
     </BrowserRouter>
