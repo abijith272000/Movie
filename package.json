@@ -1,37 +1,21 @@
 {
-<<<<<<< HEAD
-  "name": "movie",
+  "name": "food-verse",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-=======
-  "name": "axiosform",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@reduxjs/toolkit": "^2.0.1",
->>>>>>> e6b1d803f4086f6fbb8d461652672f5ed5086063
-    "@testing-library/jest-dom": "^5.17.0",
+    "@studio-freight/lenis": "^0.2.28",
+    "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.6.7",
-    "bootstrap": "^5.3.2",
-<<<<<<< HEAD
+    "bootstrap": "^5.3.3",
+    "dom": "^0.0.3",
     "react": "^18.2.0",
     "react-bootstrap": "^2.10.1",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.22.1",
+    "react-icons": "^4.7.1",
+    "react-router-dom": "^6.5.0",
     "react-scripts": "5.0.1",
-=======
-    "cors": "^2.8.5",
-    "react": "^18.2.0",
-    "react-bootstrap": "^2.10.0",
-    "react-dom": "^18.2.0",
-    "react-redux": "^9.1.0",
-    "react-router-dom": "^6.21.3",
-    "react-scripts": "5.0.1",
-    "react-toastify": "^10.0.4",
->>>>>>> e6b1d803f4086f6fbb8d461652672f5ed5086063
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -57,5 +41,14 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.13",
+    "postcss": "^8.4.20",
+    "tailwindcss": "^3.2.4"
+  },
+  "description": "Foodverse is a recipe web application, where a user can search for a variety of recipes and find the ingredients and quantities needed to make each recipe item. Also, favorite recipe items can be saved in the browser's local storage. It is easy to find different recipes for vegetarians and meat eaters, as well as those who want to lose weight.\r <br/>\r <br/>\r You're one-stop for recipes, Foodverse is the best app for any type of cooking and cooking level. Browse what's trending, plan your meals with our grocery list tool, and browse recipes by ingredient. There's nothing like a well-prepared meal to make you feel like a culinary genius!",
+  "main": "postcss.config.js",
+  "author": "",
+  "license": "ISC"
 }
